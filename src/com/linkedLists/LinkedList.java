@@ -27,6 +27,64 @@ public class LinkedList
 
  }
 
+ private Node getNodeAt(int index)
+ {
+     if(size == 0)
+     {
+         System.out.println("there's nothing in linkedlist");
+         return  null;
+
+     }else if(index <0 || index >=size)
+     {
+         System.out.println("invalid index for value retreival");
+         return  null;
+     }else {
+         Node temp = head;
+         for(int i = 0;i< index ;i++)
+         {
+             temp = temp.getNextNodeReference();
+         }
+         return  temp;
+     }
+
+ }
+
+
+ public void reverseAddressOfLinkList(LinkedList linkedList)
+ {
+     Node previous = null;
+     Node current = head;
+     while( current != null)
+     {
+         Node next = current.getNextNodeReference();
+         current.setNextNodeReference(previous);
+         previous = current;
+         current = next;
+     }
+     Node temp;
+     temp = head;
+     head = tail;
+     tail = temp;
+ }
+
+
+ public void ReverseDataOfLinkLIst(LinkedList linkedList)
+ {
+     int left = 0;
+     int right = size-1;
+     while (left < right)
+     {
+         Node leftNode = getNodeAt(left);
+         Node rightNode = getNodeAt(right);
+         int temp ;
+         temp = leftNode.getData();
+         leftNode.setData(rightNode.getData());
+         rightNode.setData(temp);
+         left++;
+         right--;
+     }
+ }
+
  public  void removeAtLast(LinkedList linkedList)
  {
      if(size == 0)
@@ -85,8 +143,8 @@ public class LinkedList
      size++;
  }
 
-    public void addInLast(int value)
-    {
+public void addInLast(int value)
+{
         Node temp = new Node();
         temp.setData(value);
         temp.setNextNodeReference(null);
@@ -104,7 +162,6 @@ public class LinkedList
         }
         size++;
     }
-
 
     public void AddValueAtIndex(int index, int data)
     {
@@ -140,7 +197,10 @@ public class LinkedList
             removeAtLast(linkedList);
         else
         {
-            Node temp = head;
+            //one approach
+
+
+            /*Node temp = head;
             Node prevBeforeTemp = head;
             for(int i = 0;i< index ;i++)
             {
@@ -152,7 +212,19 @@ public class LinkedList
             }
             prevBeforeTemp.setNextNodeReference(temp.getNextNodeReference());
             temp.setNextNodeReference(null);
+            size--;*/
+
+            //Another approach
+
+            Node temp = head;
+            for(int i = 0;i< index -1;i++)
+            {
+                temp = temp.getNextNodeReference();
+            }
+            temp.setNextNodeReference((temp.getNextNodeReference()).getNextNodeReference());
             size--;
         }
     }
+
+
 }

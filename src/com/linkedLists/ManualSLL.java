@@ -33,7 +33,7 @@ public class ManualSLL
         }
         testLinkedList(linkedList);
 
-        linkedList.addInLast(100);
+       /* linkedList.addInLast(100);
         testLinkedList(linkedList);
         linkedList.removeFirst();
         testLinkedList(linkedList);
@@ -48,6 +48,11 @@ public class ManualSLL
         linkedList.AddValueAtIndex(3,999);
         testLinkedList(linkedList);
         linkedList.removeValueAtIndex(3,linkedList);
+        testLinkedList(linkedList);*/
+
+        //linkedList.ReverseDataOfLinkLIst(linkedList);
+        linkedList.reverseAddressOfLinkList(linkedList);
+
         testLinkedList(linkedList);
 
     }
