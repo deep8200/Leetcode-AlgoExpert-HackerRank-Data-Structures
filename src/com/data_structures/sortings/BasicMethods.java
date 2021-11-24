@@ -36,7 +36,8 @@ public  class BasicMethods
                 finalSortedArray[pointerForFinalArray] = firstarray[pointerForFirst];
                 pointerForFirst++;
             }else {
-                finalSortedArray[pointerForFinalArray] = secondArray[pointerforSecond];
+                finalSortedArray[
+                        pointerForFinalArray] = secondArray[pointerforSecond];
                 pointerforSecond++;
             }
             pointerForFinalArray++;
