@@ -1,4 +1,4 @@
-package com.HackerRank.Algorithms;
+package com.pepcoding.Algos;
 
 import java.util.Scanner;
 
