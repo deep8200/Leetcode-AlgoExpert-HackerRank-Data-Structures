@@ -22,6 +22,10 @@ public class FindingElementInArray
         else
             System.out.println("NO");
 
+
+        System.out.println("****************************");
+        ifNumberAvailable(loc,toFind);
+
     }
 
     private static String isNumberAvailable(int[] loc, int toFind)
@@ -38,5 +42,27 @@ public class FindingElementInArray
             pointer++;
         }
         return res;
+    }
+    private static void  ifNumberAvailable(int[] arr,int tofind )
+    {
+    boolean ifFound = false;
+    int poistion = 0;
+        for (int i = 0; i < arr.length ; i++)
+        {
+            if (arr[i] == tofind)
+            {
+                ifFound = true;
+              //  System.out.println("number found at index : "+ i);
+                poistion = i;
+                break;
+            }else {
+                ifFound = false;
+            }
+
+        }
+        if(ifFound)
+            System.out.println("number found at index : "+ poistion);
+        else
+            System.out.println("number Not found");
     }
 }
