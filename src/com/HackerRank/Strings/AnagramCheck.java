@@ -62,10 +62,4 @@ public class AnagramCheck
         return  flag;
 
     }
-
-
-
-
-
-
 }
