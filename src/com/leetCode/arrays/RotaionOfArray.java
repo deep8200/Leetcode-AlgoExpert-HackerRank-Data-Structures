@@ -10,11 +10,12 @@ public class RotaionOfArray
 
     private static void rotate(int[] num, int k) {
 
-        k = k % num.length;
+
         if (k <0)
         {
             k = k + num.length;
         }
+        k = k % num.length;
 
 
         //1st part reverse
