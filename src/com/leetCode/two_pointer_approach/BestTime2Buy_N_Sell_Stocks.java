@@ -21,7 +21,8 @@ public class BestTime2Buy_N_Sell_Stocks
             if(num[fp] > num[lp])
             {
                 fp = lp;
-            }  else {
+            }  else
+            {
                 if (maxProfit < num[lp] - num[fp])
                 maxProfit = num[lp] - num[fp];
             }
